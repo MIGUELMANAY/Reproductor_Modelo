@@ -1,0 +1,190 @@
+.cabecera__container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0;
+}
+
+.cabecera__buscar__item{
+        display: none;
+}
+
+.rodapie__container{
+    display:flex;
+    /*flex-wrap: wrap;
+    flex-direction: column; TODO EN FLEX FLOW*/
+    flex-flow: column wrap;
+}
+/*Menu Lateral*/
+.menu__container{
+    position: fixed;
+    bottom: 0%;
+    height: 75px;
+    width: 100%;
+}
+
+.menu__lista{
+    display:flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.menu__lista li{
+    align-self: center;
+}
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4){
+    display:none;
+}
+
+.menu__itens{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+/*SECCION SUPERIOR*/
+.superior__seccion__container{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow:scroll;
+    gap: 15px;
+}
+
+/*video*/
+.videos__item{
+   /* display:flex;
+    flex-direction: column;*/
+    height: 303px;
+    width:280px;
+   gap:5px;
+   padding: 5px;
+    flex-grow: 1;
+}
+.videos__container{
+    display: flex;
+    flex-wrap: wrap;
+ /*  justify-content: flex-start;*/
+   padding-left: 0px;
+   gap:10px;
+
+
+}
+.detalles__video{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap:10px;
+
+}
+
+.descripcion-video{
+    display:flex;
+    gap:5px;
+    height: auto;
+}
+
+
+@media (min-width:834px) {
+    .cabecera__buscar__item{
+        display: block;
+    }
+    .menu__container{
+        position: none;
+        margin-top: 153px;
+        height: auto;
+
+    }
+
+}
+
+@media (min-width:480px) {
+    .menu__container{
+       height: 98vh;
+        width: 90px;
+        /*margin-top: 10%;*/
+    }
+    .menu__lista{
+        display:flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        height: 100%;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .superior__seccion__container{
+        margin-left: 15vw;
+       
+    }
+    .rodapie__container{
+        display:flex;
+        width:90%;
+        margin-left: 15vw;
+        /*flex-wrap: wrap;
+        flex-direction: column; TODO EN FLEX FLOW*/
+        flex-flow: column wrap;
+    }
+    .videos__container{
+        display: flex;
+        flex-wrap: wrap;
+     /*  justify-content: flex-start;*/
+       padding-left: 100px;
+       gap:10px;
+    
+    
+    }
+}
+
+@media (min-width:1024px){
+    .menu__container{
+        height: 98vh;
+         width: 239px;
+         margin-top: 10%;
+         overflow: scroll;
+     }
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4){
+    display:flex;
+}
+.menu__lista{
+    display:flex;
+    height: auto;
+    padding: 20px 17px 20px 15px;
+    gap:15px;
+    border-bottom: 1px grey solid;
+
+}
+.menu__itens{
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+    align-items: center;
+}
+.menu__lista:nth-child(3){
+    flex-direction: column-reverse;
+}
+
+.videojuegos{
+    order: 3;
+}
+.peliculas{
+    order: 2;
+}
+.premium{
+    order: 1;
+}
+.videos__container{
+    display: flex;
+    flex-wrap: wrap;
+ /*  justify-content: flex-start;*/
+   padding-left: 250px;
+   gap:10px;
+
+
+}
+}
